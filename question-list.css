@@ -1,0 +1,43 @@
+@CHARSET "US-ASCII";
+
+#display {
+	-webkit-perspective: 400px;
+}
+
+#question-list {
+	position:absolute;
+}
+
+#question-list .question-slide {
+	position:absolute;
+}
+
+#question-list .question-slide .question {
+	/*position*/
+	position:absolute;
+	
+	/*self styles*/
+	color: black;
+	/*plus border width then it would be 140px*/
+	width: 138px; 
+	/*plus border width then it would be 35px*/
+	height:33px;
+	line-height:33px;
+	text-align: center;
+    font-weight:bold;
+	background-color:rgba(255, 255, 255, 0.5);
+	border: 1px solid gray;
+	border-radius:3px;
+	-webkit-user-select: none;
+	opacity:0;
+}
+
+
+#question-list .question-slide .question:hover{
+	color:white;
+	transition:0.5s;
+	background-color:#0098A5;
+	cursor:pointer;
+}
+ 
+ 

@@ -1,0 +1,30 @@
+@CHARSET "US-ASCII";
+
+body {
+	background-position:right center;
+	background-image:url("application-background.jpg");
+	background-size:100% 100%;
+}
+
+#gryphon-ui {
+	/*position*/
+	position:relative;
+	
+	/*self styles*/
+ 	width:1210px;
+	margin-left:auto;
+	margin-right:auto;
+	height:590px;
+	overflow:hidden;
+	
+	/*the margin-top and margin-bottom values needs to be calculated on the fly.*/
+}
+
+#display {
+	width:1210px;
+	height:450px;
+}
+
+#message-board {
+	height:50px;
+}

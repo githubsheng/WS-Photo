@@ -1,0 +1,6 @@
+.raw-slide {
+	position:absolute;
+    width:1210px;
+    height:450px;
+	-webkit-transform: translate(1210px, 0px);
+}

@@ -1,0 +1,134 @@
+#question-detail-slide > textarea{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    width: 1208px;
+    background-color: rgba(255,255,255,0.5);
+    border: 1px white solid;
+    border-radius: 3px;
+    height: 40px;
+    resize: none;
+    text-align: center;
+    color: black;
+}
+
+
+#question-detail-slide .question-matrix-rows {
+    position: absolute;
+    top: 150px;
+
+    transition: 0.5s;
+    opacity: 0;
+}
+
+#question-detail-slide textarea:focus {
+    outline-offset: 0px;
+    outline: none;
+}
+
+#question-detail-slide .question-matrix-rows > div {
+    background-color: rgba(255,255,255,0.5);
+    border: 1px white solid;
+    border-radius: 3px;
+    width: 260px;
+    height: 40px;
+    margin: 10px 0px;
+}
+
+#question-detail-slide .question-matrix-rows > div > div,  #question-detail-slide .question-matrix-columns > div > div {
+    float:left;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding:2px;
+    width:20px;
+    height:26px;
+    margin: 4px;//margin+border+padding+height的高度刚好是40像素，等于外围DIV的height
+
+}
+
+#question-detail-slide .question-matrix-rows > div > textarea {
+    float:left;
+    resize: none;
+    color: black;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding:2px;
+    height:26px;
+    margin: 4px;//margin+border+padding+height的高度刚好是40像素，等于外围DIV的height
+
+}
+
+#question-detail-slide .question-matrix-columns {
+    position: absolute;
+    width: 1210px;
+    top: 70px;
+    right: 0px;
+
+    transition: 0.5s;
+    opacity: 0;
+}
+
+#question-detail-slide .question-matrix-columns > div {
+    border: 1px white solid;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 3px;
+    width: 220px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    float: right;
+}
+
+
+#question-detail-slide .question-matrix-columns > div > textarea {
+    resize: none;
+    color: black;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding:2px;
+    height:26px;
+    margin: 4px;//margin+border+padding+height的高度刚好是40像素，等于外围DIV的height
+}
+
+#question-detail-slide #row-slides-controller {
+    position: absolute;
+    top: 130px;
+    width: 270px;
+    height: 20px;
+}
+
+#question-detail-slide #column-slides-controller {
+    position: absolute;
+    width: 270px;
+    height: 20px;
+    top: 50px;
+    right: 0px;
+}
+
+#question-detail-slide #row-slides-controller div, #question-detail-slide #column-slides-controller div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transform: scale(0.7, 0.7);
+    transition: 0.5s;
+}
+
+#question-detail-slide #row-slides-controller div:hover, #question-detail-slide #column-slides-controller div:hover {
+    cursor:pointer;
+}
+
+#question-detail-slide #row-slides-controller div {
+    float: left;
+    margin-right: 10px;
+}
+
+#question-detail-slide #column-slides-controller div {
+    float: right;
+    margin-left: 10px;
+}

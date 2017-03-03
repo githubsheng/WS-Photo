@@ -1,0 +1,71 @@
+#message-board {
+	position: absolute;
+}
+
+#message-board > div {
+    position: absolute;
+    width:1210px;
+    height:50px;
+    text-align: center;
+    opacity: 0;
+    transition:0.5s;
+}
+
+#message-board input {
+	/*self styles*/
+	background: none;
+	border: 1px white dotted;
+    padding: 0px 3px;
+	border-radius: 3px;
+	width: 200px;
+	
+	/*text*/
+	font-family: Times Roman;
+	font-size: 20px;
+	color: white;
+	
+	/*animation*/
+	-webkit-animation: message-borad-input-border-color-change 3s infinite alternate,
+	message-board-text-color-change 3s infinite alternate;
+}
+
+#message-board input:focus {
+    outline-offset: 0px;
+    outline: none;
+}
+
+#message-board span {
+	/*text*/
+	color: white;
+	line-height: 50px;
+	font-size: 20px;
+	
+	/*animation*/
+    -webkit-animation: message-borad-input-border-color-change 3s infinite alternate,
+    message-board-text-color-change 3s infinite alternate;
+}
+
+@-webkit-keyframes message-board-text-color-change { 
+	100% {color: rgb(179, 192, 154);}
+}
+
+@-webkit-keyframes message-borad-input-border-color-change {
+	100% {border-color: rgb(179, 192, 154);}
+}
+
+
+/*只适用于流程控制节点设置的样式*/
+#message-board #configure-flow-control-node input {
+    width: 130px;
+    text-align: center;
+}
+
+#message-board #configure-flow-control-node span.configure {
+    border: 1px dotted white;
+    border-radius: 3px;
+    padding: 0px 3px;
+}
+
+#message-board #configure-flow-control-node span.configure:hover {
+    cursor: pointer;
+}

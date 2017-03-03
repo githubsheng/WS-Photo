@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="US-ASCII">
+
+<script src="jquery-2.1.0.js"></script>
+<script src="cssUtil.js"></script>
+<script src="gryphon-container-layout.js"></script>
+<script type="text/javascript" src="integrated-menu-background.js"></script>
+<script type="text/javascript" src="integrated-menu-system.js"></script>
+<script src="question-list-question.js"></script>
+<script src="question-list-question-controller.js"></script>
+<script src="question-list-slide.js"></script>
+<script src="question-list-slide-controller.js"></script>
+<script src="raw-slide.js"></script>
+<script src="raw-slide.js"></script>
+<script src="message-board.js"></script>
+<script src="question-detail-controller.js"></script>
+<script src="flow-control-configure-node-content.js"></script>
+<script src="flow-control.js"></script>
+<script src="application-controller.js"></script>
+<script src="application-main.js"></script>
+<link rel="stylesheet" type="text/css" href="gryphon-container-layout.css"/>
+<link rel="stylesheet" type="text/css" href="integrated-menu-system.css"/>
+<link rel="stylesheet" type="text/css" href="question-list.css"/>
+<link rel="stylesheet" type="text/css" href="raw-slide.css"/>
+<link rel="stylesheet" type="text/css" href="message-board.css"/>
+<link rel="stylesheet" type="text/css" href="question-detail.css"/>
+<link rel="stylesheet" type="text/css" href="flow-control.css"/>
+
+<title>Insert title here</title>
+<script>
+	var displayTest = {};
+	
+	displayTest.moveEverythingLeft = function(){
+		$("#upper-part div, #bottom-part div").css("-webkit-transform", "translate(200px, 100px)");
+	}
+	
+	displayTest.flipEverything = function(){
+		$("#upper-part div").css("-webkit-transform", "rotateX(180deg)");
+		$("#bottom-part div").css("-webkit-transform", "rotateX(0deg)");
+	}
+</script>
+</head>
+<body>
+	<div id="gryphon-ui">
+		<div id="display">
+			<div id="question-list">
+			</div>
+			<div id="question-detail-slide" class="raw-slide">
+				<!-- ???? -->
+                <textarea class="question-text"></textarea>
+                <div id="row-slides-controller">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="question-matrix-rows">
+                    <div>
+                        <div></div>
+                        <textarea>a</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>b</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>c</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>e</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>f</textarea>
+                    </div>
+                </div>
+                <div class="question-matrix-rows">
+                    <div>
+                        <div></div>
+                        <textarea>g</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>h</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>i</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>j</textarea>
+                    </div>
+                </div>
+                <div class="question-matrix-rows">
+                    <div>
+                        <div></div>
+                        <textarea>k</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>l</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>m</textarea>
+                    </div>
+                </div>
+                <div id="column-slides-controller">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="question-matrix-columns">
+                    <div>
+                        <div></div>
+                        <textarea>n</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>o</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>p</textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea>q</textarea>
+                    </div>
+                </div>
+                <div class="question-matrix-columns">
+                    <div>
+                        <div></div>
+                        <textarea></textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea></textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea></textarea>
+                    </div>
+                    <div>
+                        <div></div>
+                        <textarea></textarea>
+                    </div>
+
+                </div>
+			</div>
+			<div id="flow-control-slide" class="raw-slide">
+                <div id="canvas-position-calculator">
+                    <canvas id="flow-control-canvas"></canvas>
+                </div>
+			</div>
+			<div id="result-slide" class="raw-slide">
+				Result slide
+			</div>			
+		</div>
+		
+		<div id="message-board">
+            <div id="input-message"><span></span><input/></div>
+			<div id="help-message"><span></span></div>
+            <div id="configure-flow-control-node">
+                <span>User </span>
+                <span class="configure">answers</span>
+                <span> question </span>
+                <input placeholder="Question Name"/>
+                <span> and </span>
+                <span class="configure">selects</span>
+                <input placeholder="Column Name"/>
+                <span> for </span>
+                <input placeholder="Row Name"/>
+            </div>
+		</div>
+		
+		<div id="integrated-menu-system">
+			<!-- navigation buttons -->
+			<div class="navigation">
+				navigation
+			</div>
+			<div class="navigation">
+				navigation
+			</div>
+			<div class="navigation">
+				navigation
+			</div>
+			<div class="navigation">
+				navigation
+			</div>
+			<div class="navigation">
+				navigation
+			</div>
+			<div class="navigation">
+				navigation
+			</div>
+			<div class="navigation">
+				navigation
+			</div>
+			<div class="navigation">
+				navigation
+			</div>
+			<canvas id="menu-system-background"></canvas>
+
+			<!-- command buttons -->
+			<div class="command">
+				command
+			</div>
+			<div class="command">
+				command
+			</div>
+			<div class="command">
+				command
+			</div>
+			<div class="command">
+				command
+			</div>
+			<div class="command">
+				command
+			</div>
+			<div class="command">
+				command
+			</div>
+			<div class="command">
+				command
+			</div>
+			<div class="command">
+				command
+			</div>
+		</div>
+	</div>
+</body>
+</html>

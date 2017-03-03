@@ -1,0 +1,24 @@
+#canvas-position-calculator {
+    width:1100px;
+    height:450px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#flow-control-slide .node {
+    position: absolute;
+    padding: 0px 5px;
+    font-size: 16px;
+    line-height: 20px;
+    height:20px;
+}
+
+#flow-control-slide .node:hover {
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+
+#flow-control-slide:hover {
+    cursor: pointer;
+}
